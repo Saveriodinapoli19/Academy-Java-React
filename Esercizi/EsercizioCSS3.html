@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costruire una Pagina Web Responsive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        h1,
+        h2 {
+            padding: 30px;
+        }
+
+        header,
+        footer, main {
+            text-align: center;
+            padding: 1rem;
+        }
+
+
+        main {
+            display: flex;
+            flex-direction: row;
+            align-content: stretch;
+        }
+
+        section {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .sidebar {
+            flex: 1;
+
+        }
+
+        .content {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .card {
+            padding: 0.5rem;
+        }
+
+
+        @media (max-width: 768px) {
+
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .content {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Buongiorno, questo è il nostro sito.</h1>
+    </header>
+    <main>
+        <section class="sidebar">
+            <h1>My Site Web</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nisi ea optio quod atque cupiditate quisquam, aliquam quia
+                debitis sunt dolorem tenetur aperiam dolor, temporibus,
+                vero cum perferendis iste quo assumenda.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nisi ea optio quod atque cupiditate quisquam, aliquam quia
+                debitis sunt dolorem tenetur aperiam dolor, temporibus,
+                vero cum perferendis iste quo assumenda.
+            </p>
+        </section>
+        <section class="content">
+            <div class="card">
+                <h2>Capitolo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nisi ea optio quod atque cupiditate quisquam, aliquam quia
+                    debitis sunt dolorem tenetur aperiam dolor, temporibus,
+                    vero cum perferendis iste quo assumenda.
+                </p>
+            </div>
+            <div class="card">
+                <h2>Capitolo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nisi ea optio quod atque cupiditate quisquam, aliquam quia
+                    debitis sunt dolorem tenetur aperiam dolor, temporibus,
+                    vero cum perferendis iste quo assumenda.
+                </p>
+            </div>
+            <div class="card">
+                <h2>Capitolo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nisi ea optio quod atque cupiditate quisquam, aliquam quia
+                    debitis sunt dolorem tenetur aperiam dolor, temporibus,
+                    vero cum perferendis iste quo assumenda.
+                </p>
+            </div>
+            <div class="card">
+                <h2>Capitolo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nisi ea optio quod atque cupiditate quisquam, aliquam quia
+                    debitis sunt dolorem tenetur aperiam dolor, temporibus,
+                    vero cum perferendis iste quo assumenda.
+                </p>
+            </div>
+            <div class="card">
+                <h2>Capitolo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nisi ea optio quod atque cupiditate quisquam, aliquam quia
+                    debitis sunt dolorem tenetur aperiam dolor, temporibus,
+                    vero cum perferendis iste quo assumenda.
+                </p>
+            </div>
+            <div class="card">
+                <h2>Capitolo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nisi ea optio quod atque cupiditate quisquam, aliquam quia
+                    debitis sunt dolorem tenetur aperiam dolor, temporibus,
+                    vero cum perferendis iste quo assumenda.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>email: aaa@gmail.com - tel: 345-678-9000</p>
+    </footer>
+</body>
+
+</html>
