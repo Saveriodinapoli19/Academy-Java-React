@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body {
+            background-color: rgb(4, 205, 255);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 700px;
+            height: 100px;
+            position:relative;
+            border-radius: 70px;
+            border-style: solid;
+            left: 400px;
+            border-color: black;
+            background-color: rgba(58, 5, 248, 0.356);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            color: whitesmoke;
+            padding: 10px;
+            text-align: center;
+        }
+        contatti{
+            color :whitesmoke;
+            font-size: medium;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 50px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Accesso</h1>
-    <p>Inserisci le tue credenziali per accedere al mondo di Macchin-Go</p>
-    <form action="index.html" method="get">
-    <form>
-        <label for="Nome">Nome :</label>
-        <input type="text" name="Nome" /> <br/>
-        <br/>
-        <label for="Cognome">Congome :</label>
-        <input type="text" name="Cognome" />
-        <br/><br/>
-        <label for="Password">Password :</label>
-        <input type="password" name="Password">
-        <br></br>
-        <button type="submit">Login</button>
-
-    </form>
+    <header>
+        <h1>Accesso</h1>
+        <p>Inserisci le tue credenziali per accedere al mondo di Macchin-Go</p>
+    </header>
+    <main>
+        <form action="index.html" method="get">
+            <br />
+            <label for="Nome">Nome :</label>
+            <input type="text" name="Nome" /> <br />
+            <br />
+            <label for="Cognome">Congome :</label>
+            <input type="text" name="Cognome" />
+            <br /><br />
+            <label for="Password">Password :</label>
+            <input type="password" name="Password">
+            <br></br>
+            <button type="submit">Login</button>
+        </form>
+    </main>
+    <contatti>
+    <ul>Per problemi di accesso contattare assistenza :
+        <li><a href="mailto:dinapolisaverio.99@icloud.com">Email</a></li>
+    </ul>
+</contatti>
 </body>
-</html>
 
+</html>
