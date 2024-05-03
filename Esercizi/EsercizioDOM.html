@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista di Compiti</title>
+    <style>
+        .bottone_rimozione {
+            margin-left: 10px;
+            background-color: rgb(118, 118, 237);
+            color: white;
+            border-color: white ;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .bottone_inserimento{
+            margin-left: 10px;
+            background-color: rgb(19, 158, 22);
+            color: white;
+            border-color: white ;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .titolo{
+            color: red;
+        }
+
+        .input_space {
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titolo">Gestione Lista Compiti</h1>
+    </header>
+    
+    <main>
+        <input type="text" id="nuovo_compito" name="nuovo_compito" class = "input_space" placeholder="Inserisci un nuovo compito:">
+        <button class = "bottone_inserimento" onclick="addTask()">Aggiungi compito</button>
+        <ul id="lista_compiti"></ul>
+    </main>
+    
+
+    <script>
+        function addTask() {
+            const input_compito = document.getElementById('nuovo_compito');
+            const testo_compito = input_compito.value;
+
+            if (testo_compito) {
+                const elemento_lista = document.createElement('li');
+                elemento_lista.textContent = testo_compito;
+                elemento_lista.className = 'elemento_list';
+
+
+                const bottone_rim = document.createElement('button');
+                bottone_rim.textContent = 'Rimuovi';
+                bottone_rim.className = 'bottone_rimozione';
+                bottone_rim.onclick = function() { elemento_lista.remove(); };
+
+                elemento_lista.appendChild(bottone_rim);
+                document.getElementById('lista_compiti').appendChild(elemento_lista);
+                input_compito.value = ''; 
+            }
+        }
+
+
+    </script>
+</body>
+</html>
