@@ -83,3 +83,4 @@ function rimuoviLibro(titolo) {
     };
     addBook(libro1);
     visualizzaLibri();
+    
