@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body></body>
+<script>
+    const libri = [
+        {
+            titolo: "Il Fu Mattia Pascal",
+            autore: "Luigi Pirandello",
+            annoDiPubblicazione: 1904,
+            letto: true
+        },
+        {
+            titolo: "Il barone rampante",
+            autore: "Italo Calvino",
+            annoDiPubblicazione: 1957,
+            letto: false
+        },
+        {
+            titolo: "I Malavoglia",
+            autore: "Giovanni Verga",
+            annoDiPubblicazione: 1881,
+            letto: true
+        },
+    ];
+
+    console.log(libri);
+
+    function aggiungiLibro(libro) {
+        libri.push(libro);
+        console.log(libri);
+    }
+
+    function visualizzaLibri() {
+        console.log(libri);
+    }
+
+    function cercaLibro(titolo) {
+        for (let i = 0; i < libri.length; i++) {
+            if (titolo == libri[i].titolo) {
+                console.log(`Titolo del libro che stavi cercando è presente.`);
+            } else {
+                console.log("Libro non trovato");
+            }
+        }
+    }
+
+    function rimuoviLibro(titolo) {
+        for (let i = 0; i < libri.length; i++) {
+            if (titolo == libri[i].titolo) {
+                libri.splice(i, 1);
+                console.log(`Il libro dal titolo "${titolo}" è stato rimosso!`);
+                console.log(libri);
+            } else {
+                console.log("Libro da eliminare non trovato");
+            }
+        }
+    }
+
+    function  visualizzaLetti() {
+        for (let i = 0; i < libri.length; i++) {
+            if (libri[i]["letto"]) {
+                console.log(`Libri letti: ${libri[i].titolo}`);
+            } else {
+                console.log(`Libro non letto: ${libri[i].titolo}`);
+            }
+        }
+    }
+
+    function visualizzaNonLetti() {
+        for (let i = 0; i < libri.length; i++) {
+            if (!libri[i].letto) {
+                console.log(`Libro non letto: ${libri[i].titolo}`);
+            } else {
+                console.log(`Libri letti: ${libri[i].titolo}`);
+            }
+        }
+    }
+
+
+    const newLibro = {
+        titolo: "I promessi sposi",
+        autore: "Alessandro Manzoni",
+        annoDiPubblicazione: 1825,
+        letto: true
+    }
+
+    aggiungiLibro(newLibro);
+    visualizzaLibri();
+
+    const searchTitle = "I promessi sposi";
+    cercaLibro(searchTitle);
+
+    const deleteBook = "I Malavoglia";
+    rimuoviLibro(deleteBook);
+
+    visualizzaLetti();
+    visualizzaNonLetti();
+</script>
+</html>
